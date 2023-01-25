@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@300;400;500;700&family=Montserrat:wght@200;300;400;700&family=Poppins:wght@200;400;600;700&display=swap');
+
+@import url(variaveis.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: var(--bg-color);
+    overflow-x: hidden;
+}
+
+h1,h2,h3,button {
+    font-family: 'EB Garamond', serif;
+    color: var(--h1-color);
+    font-weight: 200;
+}
+
+a,p {
+    color: var(--p-color);
+    font-weight: 300;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 8rem;
+}
+
+.menu {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.menu-resp {
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.logo {
+    color: var(--h1-color);
+    letter-spacing: 2px;
+    font-size: .9em;
+}
+
+.navbar li,a {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+button {
+    border: none;
+    transition: .5s;
+    background-color: var(--button-color);
+    color: black;
+    padding: 15px 25px;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(141, 141, 47);
+    box-shadow: 7px 7px 10px rgba(255, 255, 255, 0.075);
+    color: white;
+}
+
+section {
+    width: 100%;
+    padding: 2rem 8rem;
+}
+
+.text h1, p, .brands {
+    padding: 1rem 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.brands {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.bottom-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-main .card img  {
+    cursor: pointer;
+    transition: 1s;
+}
+
+.bottom-main .card img:hover {
+    transform: scale(105%);
+    box-shadow: 7px 7px 10px rgba(255, 255, 255, 0.075);
+}
+
+.bottom-main .card h2 {
+    margin: 1rem 0;
+    font-size: 2.5em;
+}
+
+.info {
+    width: 100%;
+    background: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info p {
+    margin: 0 2rem 0rem 0rem;
+}
+
+.contact {
+    width: 100%;
+}
+
+.container-contact {
+    text-align: left;
+}
+
+footer {
+    padding: 2rem 8rem;
+    background: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons img {
+    margin: 0 .5rem;
+}
+
+@media screen and (max-width:768px) {
+
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu {
+        transition: .5s;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #18181a;
+        left: 120%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-resp {
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-resp li,a {
+        list-style: none;
+        margin: 2rem 0;
+        font-size: 1.6em;
+    }
+
+    .navbar-resp a {
+        border-bottom: 1px solid white;
+    }
+
+    .menu-resp {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .close-button {
+        position: relative;
+        left: -10%;
+    }
+
+    .display {
+        opacity: 1;
+        pointer-events: all;
+        left: 0%;
+    }
+    
+    .hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    header {
+        padding: 2rem 4rem;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    section {
+        padding: 2rem 4rem;
+    }
+
+    .navbar li > a,.btn-header {
+        display: none;
+    }
+
+    .brands {
+        flex-direction: column;
+    }
+
+    .brands img {
+        margin: 1.5rem 0;
+    }
+
+    .bottom-main {
+        flex-direction: column;
+    }
+
+    .bottom-main .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-main .card h2 {
+        font-size: 2.5em;
+    }
+
+    .bottom-main .card h2,p {
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+    
+    .bottom-main .card img {
+        max-height: 200px;
+        max-width: 200px;
+    }
+
+    .info {
+        margin: 0;
+        padding: 2rem 4rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info p {
+        margin: 0;
+    }
+
+    .container-contact {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        padding: 2rem 3rem;
+    }
+
+    .icons {
+        width: 100%;
+    }
+
+    .icons img {
+        margin: 0 .5px;
+    }
+
+}
